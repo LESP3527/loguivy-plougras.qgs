@@ -8,10 +8,8 @@ Projet QGIS prêt à l'emploi : **`loguivy-plougras.qgs`**
 |---|---|---|
 | Lieux-dits (BD TOPO) | IGN — Géoplateforme (WFS) | 170 lieux-dits et hameaux nommés (toponyme dans le champ `toponyme`) |
 | Voirie (BD TOPO) | IGN — Géoplateforme (WFS) | Tronçons de routes, rues et chemins de la commune |
-| Sections cadastrales (dérivées) | calculée dans le projet | Contours des sections, agrégés depuis les parcelles |
 | Parcelles (cadastre) | IGN — Parcellaire Express (WFS) | 8 826 parcelles (n° dans le champ `numero`, surface dans `contenance`) |
 | Contour de la commune | IGN — Parcellaire Express (WFS) | Limite officielle de la commune |
-| Orthophoto IGN | IGN — Géoplateforme (WMTS) | Photos aériennes (désactivée par défaut : cocher la couche) |
 | Fond OpenStreetMap | OpenStreetMap (XYZ) | Fond de carte général |
 
 Système de coordonnées du projet : **RGF93 / Lambert-93 (EPSG:2154)**.
@@ -53,10 +51,24 @@ Puis choisissez la couche et, dans les propriétés de la couche ▸ *Source* �
 - Voirie : `insee_commune_gauche = '22131' OR insee_commune_droite = '22131'`
 - Lieux-dits : `insee_commune = '22131'`
 
-La couche « Sections cadastrales (dérivées) » est une couche virtuelle calculée à
-partir des parcelles : elle s'affiche une fois les parcelles chargées. Si elle
-signale une erreur, ouvrez ses propriétés ▸ *Source* et vérifiez la requête :
-`SELECT section, ST_Union(geometry) AS geometry FROM parcelles_22131 GROUP BY section`.
+## Ajouter les sections cadastrales (optionnel)
+
+Une fois les parcelles affichées : `Couche ▸ Créer une couche ▸ Nouvelle couche virtuelle`,
+puis dans la requête :
+
+```sql
+SELECT section, ST_Union(geometry) AS geometry
+FROM "Parcelles (cadastre)"
+GROUP BY section
+```
+
+## Ajouter l'orthophoto IGN (optionnel)
+
+`Couche ▸ Ajouter une couche ▸ Ajouter une couche WMTS`, nouvelle connexion :
+
+- URL : `https://data.geopf.fr/wmts`
+- Couche : `ORTHOIMAGERY.ORTHOPHOTOS`
+- Style : `normal`, matrice de tuiles : `PM`, format : `image/jpeg`
 
 ## Sources et licences
 
