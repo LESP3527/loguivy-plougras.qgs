@@ -1,0 +1,211 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.15-LTR" projectname="Loguivy-Plougras">
+ <homePath></homePath>
+ <title>Loguivy-Plougras (22131) - Cadastre, lieux-dits et voirie</title>
+ <autotransaction active="0"/>
+ <evaluateDefaultValues active="0"/>
+ <trust active="0"/>
+ <projectCrs>
+      <spatialrefsys nativeFormat="Wkt">
+       <wkt>PROJCS["RGF93 v1 / Lambert-93",GEOGCS["RGF93 v1",DATUM["Reseau_Geodesique_Francais_1993_v1",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6171"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4171"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","2154"]]</wkt>
+       <proj4>+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+       <srid>2154</srid>
+       <authid>EPSG:2154</authid>
+       <epsg>2154</epsg>
+       <geographicflag>false</geographicflag>
+      </spatialrefsys>
+ </projectCrs>
+ <projectlayers>
+  <maplayer type="vector" geometry="Polygon" wkbType="MultiPolygon">
+   <id>lieuxdits_22131</id>
+   <datasource>pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;BDTOPO_V3:zone_d_habitation&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;</datasource>
+   <layername>Lieux-dits (BD TOPO)</layername>
+   <srs>
+      <spatialrefsys nativeFormat="Wkt">
+       <wkt>PROJCS["RGF93 v1 / Lambert-93",GEOGCS["RGF93 v1",DATUM["Reseau_Geodesique_Francais_1993_v1",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6171"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4171"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","2154"]]</wkt>
+       <proj4>+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+       <srid>2154</srid>
+       <authid>EPSG:2154</authid>
+       <epsg>2154</epsg>
+       <geographicflag>false</geographicflag>
+      </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">WFS</provider>
+   <subsetString>insee_commune='22131'</subsetString>
+   <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0" symbollevels="0" referencescale="-1">
+    <symbols>
+     <symbol type="fill" name="0" alpha="1" clip_to_extent="1" force_rhr="0">
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+       <Option type="Map">
+        <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+        <Option type="QString" name="color" value="0,0,0,0,hsv:0,0,0,0,1"/>
+        <Option type="QString" name="joinstyle" value="bevel"/>
+        <Option type="QString" name="outline_color" value="255,125,0,255"/>
+        <Option type="QString" name="outline_style" value="solid"/>
+        <Option type="QString" name="outline_width" value="0.46"/>
+        <Option type="QString" name="outline_width_unit" value="MM"/>
+        <Option type="QString" name="style" value="solid"/>
+       </Option>
+      </layer>
+     </symbol>
+    </symbols>
+   </renderer-v2>
+   <blendMode>0</blendMode>
+  </maplayer>
+  <maplayer type="vector" geometry="Line" wkbType="LineString">
+   <id>voirie_22131</id>
+   <datasource>pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;BDTOPO_V3:troncon_de_route&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;</datasource>
+   <layername>Voirie (BD TOPO)</layername>
+   <srs>
+      <spatialrefsys nativeFormat="Wkt">
+       <wkt>PROJCS["RGF93 v1 / Lambert-93",GEOGCS["RGF93 v1",DATUM["Reseau_Geodesique_Francais_1993_v1",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6171"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4171"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","2154"]]</wkt>
+       <proj4>+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+       <srid>2154</srid>
+       <authid>EPSG:2154</authid>
+       <epsg>2154</epsg>
+       <geographicflag>false</geographicflag>
+      </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">WFS</provider>
+   <subsetString>insee_commune_gauche='22131' OR insee_commune_droite='22131'</subsetString>
+   <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0" symbollevels="0" referencescale="-1">
+    <symbols>
+     <symbol type="line" name="0" alpha="1" clip_to_extent="1" force_rhr="0">
+      <layer class="SimpleLine" enabled="1" locked="0" pass="0">
+       <Option type="Map">
+        <Option type="QString" name="align_dash_pattern" value="0"/>
+        <Option type="QString" name="capstyle" value="flat"/>
+        <Option type="QString" name="color" value="80,80,80,255"/>
+        <Option type="QString" name="joinstyle" value="bevel"/>
+        <Option type="QString" name="offset" value="0"/>
+        <Option type="QString" name="offset_unit" value="MM"/>
+        <Option type="QString" name="ring_filter" value="0"/>
+        <Option type="QString" name="use_custom_dash" value="0"/>
+        <Option type="QString" name="width" value="0.6"/>
+        <Option type="QString" name="width_unit" value="MM"/>
+       </Option>
+      </layer>
+     </symbol>
+    </symbols>
+   </renderer-v2>
+   <blendMode>0</blendMode>
+  </maplayer>
+  <maplayer type="vector" geometry="Polygon" wkbType="MultiPolygon">
+   <id>parcelles_22131</id>
+   <datasource>pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;CADASTRALPARCELS.PARCELLAIRE_EXPRESS:parcelle&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;</datasource>
+   <layername>Parcelles (cadastre)</layername>
+   <srs>
+      <spatialrefsys nativeFormat="Wkt">
+       <wkt>PROJCS["RGF93 v1 / Lambert-93",GEOGCS["RGF93 v1",DATUM["Reseau_Geodesique_Francais_1993_v1",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6171"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4171"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","2154"]]</wkt>
+       <proj4>+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+       <srid>2154</srid>
+       <authid>EPSG:2154</authid>
+       <epsg>2154</epsg>
+       <geographicflag>false</geographicflag>
+      </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">WFS</provider>
+   <subsetString>code_insee='22131'</subsetString>
+   <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0" symbollevels="0" referencescale="-1">
+    <symbols>
+     <symbol type="fill" name="0" alpha="1" clip_to_extent="1" force_rhr="0">
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+       <Option type="Map">
+        <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+        <Option type="QString" name="color" value="0,0,0,0,hsv:0,0,0,0,1"/>
+        <Option type="QString" name="joinstyle" value="bevel"/>
+        <Option type="QString" name="outline_color" value="30,60,150,255"/>
+        <Option type="QString" name="outline_style" value="solid"/>
+        <Option type="QString" name="outline_width" value="0.26"/>
+        <Option type="QString" name="outline_width_unit" value="MM"/>
+        <Option type="QString" name="style" value="solid"/>
+       </Option>
+      </layer>
+     </symbol>
+    </symbols>
+   </renderer-v2>
+   <blendMode>0</blendMode>
+  </maplayer>
+  <maplayer type="vector" geometry="Polygon" wkbType="MultiPolygon">
+   <id>commune_22131</id>
+   <datasource>pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;CADASTRALPARCELS.PARCELLAIRE_EXPRESS:commune&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;</datasource>
+   <layername>Contour de la commune</layername>
+   <srs>
+      <spatialrefsys nativeFormat="Wkt">
+       <wkt>PROJCS["RGF93 v1 / Lambert-93",GEOGCS["RGF93 v1",DATUM["Reseau_Geodesique_Francais_1993_v1",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6171"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4171"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","2154"]]</wkt>
+       <proj4>+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+       <srid>2154</srid>
+       <authid>EPSG:2154</authid>
+       <epsg>2154</epsg>
+       <geographicflag>false</geographicflag>
+      </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">WFS</provider>
+   <subsetString>code_insee='22131'</subsetString>
+   <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0" symbollevels="0" referencescale="-1">
+    <symbols>
+     <symbol type="fill" name="0" alpha="1" clip_to_extent="1" force_rhr="0">
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+       <Option type="Map">
+        <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+        <Option type="QString" name="color" value="0,0,0,0,hsv:0,0,0,0,1"/>
+        <Option type="QString" name="joinstyle" value="bevel"/>
+        <Option type="QString" name="outline_color" value="230,0,0,255"/>
+        <Option type="QString" name="outline_style" value="solid"/>
+        <Option type="QString" name="outline_width" value="0.8"/>
+        <Option type="QString" name="outline_width_unit" value="MM"/>
+        <Option type="QString" name="style" value="solid"/>
+       </Option>
+      </layer>
+     </symbol>
+    </symbols>
+   </renderer-v2>
+   <blendMode>0</blendMode>
+  </maplayer>
+  <maplayer type="raster">
+   <id>ortho_ign</id>
+   <datasource>crs=EPSG:3857&amp;dpiMode=7&amp;format=image/jpeg&amp;layers=ORTHOIMAGERY.ORTHOPHOTOS&amp;styles=normal&amp;tileMatrixSet=PM&amp;url=https://data.geopf.fr/wmts</datasource>
+   <layername>Orthophoto IGN</layername>
+   <srs>
+    <spatialrefsys nativeFormat="Wkt">
+     <authid>EPSG:3857</authid>
+    </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">wms</provider>
+  </maplayer>
+  <maplayer type="raster">
+   <id>fond_osm</id>
+   <datasource>crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png</datasource>
+   <layername>Fond OpenStreetMap</layername>
+   <srs>
+    <spatialrefsys nativeFormat="Wkt">
+     <authid>EPSG:3857</authid>
+    </spatialrefsys>
+   </srs>
+   <provider encoding="UTF-8">wms</provider>
+  </maplayer>
+ </projectlayers>
+ <layer-tree-groups>
+  <layer-tree-group expanded="1" name="" checked="Qt::Unchecked" mutual-exclusion-checked="0">
+   <customproperties/>
+    <layer-tree-layer source="pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;BDTOPO_V3:zone_d_habitation&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;" name="Lieux-dits (BD TOPO)" expanded="1" checked="Qt::Checked" id="lieuxdits_22131" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;BDTOPO_V3:troncon_de_route&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;" name="Voirie (BD TOPO)" expanded="1" checked="Qt::Checked" id="voirie_22131" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;CADASTRALPARCELS.PARCELLAIRE_EXPRESS:parcelle&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;" name="Parcelles (cadastre)" expanded="1" checked="Qt::Checked" id="parcelles_22131" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="pagingEnabled=&apos;true&apos; srsname=&apos;EPSG:2154&apos; typename=&apos;CADASTRALPARCELS.PARCELLAIRE_EXPRESS:commune&apos; url=&apos;https://data.geopf.fr/wfs/ows&apos; version=&apos;2.0.0&apos;" name="Contour de la commune" expanded="1" checked="Qt::Checked" id="commune_22131" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="crs=EPSG:3857&amp;dpiMode=7&amp;format=image/jpeg&amp;layers=ORTHOIMAGERY.ORTHOPHOTOS&amp;styles=normal&amp;tileMatrixSet=PM&amp;url=https://data.geopf.fr/wmts" name="Orthophoto IGN" expanded="1" checked="Qt::Unchecked" id="ortho_ign" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" name="Fond OpenStreetMap" expanded="1" checked="Qt::Checked" id="fond_osm" legend-split-behavior="0">
+     <customproperties/>
+    </layer-tree-layer>
+  </layer-tree-group>
+ </layer-tree-groups>
+</qgis>
